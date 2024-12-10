@@ -12,7 +12,7 @@ export function Hero() {
         src="/images/aboutUs/cover.png"
         alt="Office environment"
         fill
-        className="object-cover"
+        className="object-cover blur-sm"
         priority
       />
       <div className="absolute inset-0 bg-black/50" />
@@ -20,7 +20,7 @@ export function Hero() {
       <div className="container relative z-10 mx-auto px-4 pt-20">
         <Badge
           variant="secondary"
-          className="bg-white/80  text-purple mb-6 px-4 py-1.5 text-sm backdrop-blur-sm border-0 flex items-center gap-2 w-fit"
+          className="bg-white/80  rounded-full text-purple mb-6 px-4 py-1.5 text-sm backdrop-blur-sm border-0 flex items-center gap-2 w-fit"
         >
           <User2 className="w-4 h-4 text-purple" />
           About Us
