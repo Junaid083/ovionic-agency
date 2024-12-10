@@ -43,7 +43,7 @@ export default function Features() {
         <div className="text-center mb-12 sm:mb-16">
           <Badge 
             variant="secondary" 
-            className="bg-[#EEF2FF] text-purple mb-8 px-6 py-2 text-sm font-medium"
+            className="bg-[#EEF2FF] text-purple mb-8 px-6 py-2 text-sm font-medium rounded-full"
           >
             OUR FEATURES
           </Badge>

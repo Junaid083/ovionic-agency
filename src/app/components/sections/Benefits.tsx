@@ -37,7 +37,7 @@ export default function Benefits() {
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
           <Badge
             variant="outline"
-            className="bg-white border-purple text-purple mb-6 sm:mb-8 px-4 sm:px-6 py-1 sm:py-2 text-xs sm:text-sm font-medium"
+            className="bg-white border-purple rounded-full text-purple mb-6 sm:mb-8 px-4 sm:px-6 py-1 sm:py-2 text-xs sm:text-sm font-medium"
           >
             Our Services
           </Badge>
@@ -61,7 +61,7 @@ export default function Benefits() {
             <div
               key={index}
               className={`bg-white rounded-3xl p-6 sm:p-8 text-left transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl ${
-                benefit.featured ? "shadow-lg" : ""
+                benefit.featured ? "shadow-lg" : "shadow-md"
               }`}
             >
               <div className="mb-6">

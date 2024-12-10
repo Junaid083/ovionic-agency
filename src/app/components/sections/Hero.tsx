@@ -16,7 +16,7 @@ export default function Hero() {
           src="/images/bg-main.png"
           alt="Background"
           fill
-          className="object-cover"
+          className="object-cover blur-sm"
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
