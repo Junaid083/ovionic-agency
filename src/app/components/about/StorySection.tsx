@@ -23,7 +23,7 @@ export function StorySection({
         <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
           {title}
         </h3>
-        <p className="text-[#6B7280] text-base sm:text-lg leading-relaxed">
+        <p className="text-gray text-base sm:text-lg leading-relaxed">
           {description}
         </p>
       </div>

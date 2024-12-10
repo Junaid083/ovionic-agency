@@ -29,7 +29,7 @@ export default function Newsletter() {
               placeholder="E.g Doejohn@example.com"
               className="h-12 bg-[#1a1a1a]/60 border-white/10 text-white placeholder:text-gray-500 rounded-lg"
             />
-            <Button className="h-12 px-8 rounded-lg bg-[#8B5CF6] hover:bg-[#7C3AED] text-white whitespace-nowrap">
+            <Button className="h-12 px-8 rounded-lg bg-purple hover:bg-purple-900 text-white whitespace-nowrap">
               Discover more <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

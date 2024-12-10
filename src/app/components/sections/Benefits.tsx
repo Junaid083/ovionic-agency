@@ -37,7 +37,7 @@ export default function Benefits() {
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
           <Badge
             variant="outline"
-            className="bg-white border-[#8B5CF6] text-[#8B5CF6] mb-6 sm:mb-8 px-4 sm:px-6 py-1 sm:py-2 text-xs sm:text-sm font-medium"
+            className="bg-white border-purple text-purple mb-6 sm:mb-8 px-4 sm:px-6 py-1 sm:py-2 text-xs sm:text-sm font-medium"
           >
             Our Services
           </Badge>
@@ -45,11 +45,11 @@ export default function Benefits() {
           <h2 className="text-3xl sm:text-[40px] font-bold mb-2 tracking-tight">
             Benefits for Your Business
           </h2>
-          <h2 className="text-3xl sm:text-[40px] font-bold text-[#8B5CF6] mb-4 sm:mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-[40px] font-bold text-purple mb-4 sm:mb-6 tracking-tight">
             Growth
           </h2>
 
-          <p className="text-[#6B7280] max-w-3xl text-base sm:text-lg">
+          <p className="text-gray max-w-3xl text-base sm:text-lg">
             Strengthening customer connections, streamlining operations,
             optimizing data organization, fostering effective communication, and
             enhancing overall sales effectiveness.
@@ -67,7 +67,7 @@ export default function Benefits() {
               <div className="mb-6">
                 <div
                   className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full ${
-                    benefit.featured ? "bg-[#8B5CF6]" : "bg-[#F8F9FC]"
+                    benefit.featured ? "bg-purple" : "bg-[#F8F9FC]"
                   } flex items-center justify-center`}
                 >
                   <Image

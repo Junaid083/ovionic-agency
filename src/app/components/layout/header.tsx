@@ -30,7 +30,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1">
-            <span className="text-[#8B5CF6] text-2xl font-bold">O</span>
+            <span className="text-purple text-2xl font-bold">O</span>
             <span className="text-2xl font-bold">vionic</span>
           </Link>
 
@@ -42,8 +42,8 @@ export default function Header() {
                 href={item.href}
                 className={`font-medium transition-colors ${
                   pathname === item.href
-                    ? "text-[#8B5CF6]"
-                    : "text-gray-900 hover:text-[#8B5CF6]"
+                    ? "text-purple"
+                    : "text-black hover:text-purple"
                 }`}
               >
                 {item.name}
@@ -59,7 +59,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-[#8B5CF6] transition-colors"
+                  className="text-gray-600 hover:text-purple transition-colors"
                 >
                   <Icon className="w-5 h-5" />
                 </Link>
@@ -82,8 +82,8 @@ export default function Header() {
                     href={item.href}
                     className={`font-medium text-lg ${
                       pathname === item.href
-                        ? "text-[#8B5CF6]"
-                        : "text-gray-900 hover:text-[#8B5CF6]"
+                        ? "text-purple"
+                        : "text-black hover:text-purple"
                     }`}
                   >
                     {item.name}
@@ -97,7 +97,7 @@ export default function Header() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="text-gray-600 hover:text-[#8B5CF6] transition-colors"
+                      className="text-gray-600 hover:text-purple transition-colors"
                     >
                       <Icon className="h-5 w-5" />
                     </Link>

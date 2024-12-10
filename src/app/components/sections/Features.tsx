@@ -43,7 +43,7 @@ export default function Features() {
         <div className="text-center mb-12 sm:mb-16">
           <Badge 
             variant="secondary" 
-            className="bg-[#EEF2FF] text-[#8B5CF6] mb-8 px-6 py-2 text-sm font-medium"
+            className="bg-[#EEF2FF] text-purple mb-8 px-6 py-2 text-sm font-medium"
           >
             OUR FEATURES
           </Badge>
@@ -73,18 +73,18 @@ export default function Features() {
               <div className={`space-y-6 ${
                 index % 2 === 1 ? 'lg:col-start-1' : ''
               }`}>
-                <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#EEF2FF] text-sm text-[#8B5CF6] font-medium">
+                <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#EEF2FF] text-sm text-purple font-medium">
                   {feature.id}
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold text-[#1F2937]">
                   {feature.title}
                 </h3>
-                <p className="text-[#6B7280] text-base sm:text-lg leading-relaxed">
+                <p className="text-gray text-base sm:text-lg leading-relaxed">
                   {feature.description}
                 </p>
                 <Button
                   variant="link"
-                  className="text-[#8B5CF6] font-medium p-0 h-auto hover:text-[#7C3AED] hover:no-underline"
+                  className="text-purple font-medium p-0 h-auto hover:text-[#7C3AED] hover:no-underline"
                   asChild
                 >
                   <Link href="#" className="inline-flex items-center gap-2">

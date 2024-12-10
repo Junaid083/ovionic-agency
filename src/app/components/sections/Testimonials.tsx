@@ -29,7 +29,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-[#020817] py-24">
+    <section className="bg-navy py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center mb-16">
           <Badge
@@ -41,7 +41,7 @@ export default function Testimonials() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Our customers say about us
           </h2>
-          <p className="text-gray-400 max-w-2xl text-base sm:text-lg">
+          <p className="text-gray max-w-2xl text-base sm:text-lg">
             Build trust, increase conversions, and watch your business thrive.
             Try it today and let your customers voices be your best sales tool.
           </p>
@@ -57,16 +57,16 @@ export default function Testimonials() {
                 {Array.from({ length: item.rating }).map((_, i) => (
                   <Star
                     key={i}
-                    className="h-5 w-5 fill-[#8B5CF6] text-[#8B5CF6]"
+                    className="h-5 w-5 fill-purple text-purple"
                   />
                 ))}
               </div>
-              <p className="text-gray-300 mb-6 text-sm sm:text-base">
+              <p className="text-gray mb-6 text-sm sm:text-base">
                 "{item.quote}"
               </p>
               <div>
                 <p className="font-semibold text-white">{item.author}</p>
-                <p className="text-sm text-gray-400">{item.role}</p>
+                <p className="text-sm text-gray">{item.role}</p>
               </div>
             </Card>
           ))}
@@ -75,7 +75,7 @@ export default function Testimonials() {
         <div className="flex justify-center">
           <Button
             size="lg"
-            className="rounded-lg bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8"
+            className="rounded-lg bg-purple hover:bg-[#7C3AED] text-white px-8"
           >
             Get started <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

@@ -20,9 +20,9 @@ export function Hero() {
       <div className="container relative z-10 mx-auto px-4 pt-20">
         <Badge
           variant="secondary"
-          className="bg-white/10 mb-6 px-4 py-1.5 text-sm backdrop-blur-sm border-0 flex items-center gap-2 w-fit"
+          className="bg-white/80  text-purple mb-6 px-4 py-1.5 text-sm backdrop-blur-sm border-0 flex items-center gap-2 w-fit"
         >
-          <User2 className="w-4 h-4" />
+          <User2 className="w-4 h-4 text-purple" />
           About Us
         </Badge>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white max-w-4xl mb-6 leading-[1.2]">
@@ -34,7 +34,7 @@ export function Hero() {
         </p>
         <Button
           size="lg"
-          className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white rounded-full px-8"
+          className="bg-purple hover:bg-purple-900 text-white rounded-full px-8"
         >
           Get in touch <ArrowRight className="ml-2 h-5 w-5" />
         </Button>

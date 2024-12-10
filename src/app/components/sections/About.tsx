@@ -49,12 +49,12 @@ export default function About({ imagePosition = 'left' }: AboutProps) {
   const ContentSection = (
     <div className="space-y-6">
       <h2 className="text-3xl sm:text-4xl font-bold">{data.title}</h2>
-      <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+      <p className="text-gray text-base sm:text-lg leading-relaxed">
         {data.description}
       </p>
       <Button 
         size="lg" 
-        className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 sm:px-8"
+        className="bg-purple hover:bg-purple-900 text-white rounded-full px-6 sm:px-8"
       >
         {data.buttonText}
         <svg 
