@@ -1,13 +1,17 @@
-import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 export default function Hero() {
   return (
-    <div className="relative">
+    <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen">
+      <section className="relative h-[85vh] flex items-center">
         <Image
           src="/images/bg-main.png"
           alt="Background"
@@ -19,16 +23,19 @@ export default function Hero() {
         <div className="relative z-10 container mx-auto px-4 min-h-screen flex items-center">
           <div className="max-w-xl md:max-w-2xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-              A creative agency<br />
-              for redemptive<br />
+              A creative agency
+              <br />
+              for redemptive
+              <br />
               brands
             </h1>
             <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-md sm:max-w-xl">
-              We are Ovionic Based Design Agency. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum felis, sed ullamcorper tempus faucibus in imperdiet. Semper justo mauris sed fusce erat aenean tristique.
+              We are Ovionic Based Design Agency. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Elementum felis, sed ullamcorper
+              tempus faucibus in imperdiet. Semper justo mauris sed fusce erat
+              aenean tristique.
             </p>
-            <Button 
-              className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 sm:px-8 h-12 text-sm sm:text-base"
-            >
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 sm:px-8 h-12 text-sm sm:text-base">
               Get in touch
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
@@ -48,7 +55,10 @@ export default function Hero() {
           >
             <CarouselContent>
               {partners.map((partner) => (
-                <CarouselItem key={partner.name} className="basis-1/3 sm:basis-1/5">
+                <CarouselItem
+                  key={partner.name}
+                  className="basis-1/3 sm:basis-1/5"
+                >
                   <div className="p-1">
                     <Image
                       src={partner.logo}
@@ -65,14 +75,13 @@ export default function Hero() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 const partners = [
-  { name: 'Zapier', logo: '/images/zapier.png' },
-  { name: 'Spotify', logo: '/images/spotify.png' },
-  { name: 'Zoom', logo: '/images/zoom.png' },
-  { name: 'Slack', logo: '/images/slack.png' },
-  { name: 'Amazon', logo: '/images/amazon.png' },
-]
-
+  { name: "Zapier", logo: "/images/zapier.png" },
+  { name: "Spotify", logo: "/images/spotify.png" },
+  { name: "Zoom", logo: "/images/zoom.png" },
+  { name: "Slack", logo: "/images/slack.png" },
+  { name: "Amazon", logo: "/images/amazon.png" },
+];
