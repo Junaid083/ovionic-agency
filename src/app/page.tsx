@@ -8,19 +8,17 @@ import CEO from "./components/sections/CEO";
 import CTA from "./components/sections/CTA";
 import Testimonials from "./components/sections/Testimonials";
 import Newsletter from "./components/sections/Newsletter";
+import Widget from "./components/layout/Widget";
 export default function Home() {
   return (
     <>
       <Hero />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <Widget>
         <About imagePosition="left" /> <Benefits />
         <About imagePosition="right" />
         <Features />
-        {/* <CEO /> */}
         <CTA />
-      </div>
-      <Testimonials />
-      <Newsletter />
+      </Widget>
     </>
   );
 }
