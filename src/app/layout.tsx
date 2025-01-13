@@ -66,7 +66,7 @@ export default function RootLayout({
     >
       <body className="font-manrope">
         <Header />
-        <main>{children}</main>
+        <main className="pt-20">{children}</main>
         <Testimonials />
         <Newsletter />
         <Footer />
