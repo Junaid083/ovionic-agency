@@ -30,8 +30,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1">
-            <span className="text-purple text-2xl font-bold">O</span>
-            <span className="text-2xl font-bold">vionic</span>
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={200}
+              height={150}
+              className="w-32 sm:w-48 md:w-48" // Adjust width for mobile, small, and medium screens
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -40,7 +45,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors ${
+                className={`font-bold transition-colors ${
                   pathname === item.href
                     ? "text-purple"
                     : "text-black hover:text-purple"
