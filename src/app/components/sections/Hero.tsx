@@ -16,26 +16,26 @@ export default function Hero() {
           src="/images/bg-main.png"
           alt="Background"
           fill
-          className="object-cover blur-sm"
+          className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 " />
         <div className="relative z-10 container mx-auto px-4 min-h-screen flex items-center">
-          <div className="max-w-xl md:max-w-2xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+          <div className=" text-center md:text-left max-w-xl md:max-w-2xl bg-gray-700/50 p-12 rounded-lg backdrop-blur-md ">
+            <h1 className="font-manrope text-3xl  sm:text-5xl md:text-6xl  font-black text-white leading-[1.2] mb-8">
               A creative agency
               <br />
               for redemptive
               <br />
               brands
             </h1>
-            <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-md sm:max-w-xl">
+            <p className="font-plus-jakarta text-base  sm:text-lg text-gray-100 mb-8 max-w-md sm:max-w-xl opacity-90">
               We are Ovionic Based Design Agency. Lorem ipsum dolor sit amet,
               consectetur adipiscing elit. Elementum felis, sed ullamcorper
               tempus faucibus in imperdiet. Semper justo mauris sed fusce erat
               aenean tristique.
             </p>
-            <Button className="bg-purple hover:bg-purple-700 text-white rounded-full px-6 sm:px-8 h-12 text-sm sm:text-base">
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6     sm:px-8 h-12 text-sm sm:text-base font-bold">
               Get in touch
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
