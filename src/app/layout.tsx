@@ -3,9 +3,12 @@ import Header from "./components/layout/header";
 import Newsletter from "./components/sections/Newsletter";
 import Testimonials from "./components/sections/Testimonials";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Manrope } from 'next/font/google';
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({ 
+  subsets: ["latin"],
+  variable: '--font-manrope',
+});
 
 export const metadata = {
   title: "Ovionic Agency | A Creative Agency for Redemptive Brands",
@@ -41,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={manrope.variable}>
+      <body className="font-manrope">
         <Header />
         <main>{children}</main>
         <Testimonials />
@@ -52,3 +55,4 @@ export default function RootLayout({
     </html>
   );
 }
+
