@@ -7,7 +7,7 @@ import { ArrowRight, User2 } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative h-[85vh] flex items-center">
+    <section className="relative h-[85vh] flex items-center justify-center">
       <Image
         src="/images/aboutUs/cover.png"
         alt="Office environment"
@@ -17,10 +17,10 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="container relative z-10 mx-auto px-4 pt-20">
+      <div className="container relative z-10 mx-auto px-4 text-center flex flex-col items-center justify-center">
         <Badge
           variant="secondary"
-          className="bg-white/80  rounded-full text-purple mb-6 px-4 py-1.5 text-sm backdrop-blur-sm border-0 flex items-center gap-2 w-fit"
+          className="bg-white/80 rounded-full text-purple mb-6 px-4 py-1.5 text-sm backdrop-blur-sm border-0 flex items-center gap-2 w-fit mx-auto"
         >
           <User2 className="w-4 h-4 text-purple" />
           About Us
