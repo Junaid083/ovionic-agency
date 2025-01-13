@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, User2 } from "lucide-react";
 import ProjectCard from "../components/ProjectCard";
 import Widget from "../components/layout/Widget";
 import Features from "../components/sections/Features";
 import CTA from "../components/sections/CTA";
-import { redirect } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
 
 export default function ServicesPage() {
   return (
@@ -21,10 +21,15 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-4 min-h-[80vh] flex items-center justify-center text-center">
           <div className="max-w-3xl">
-            <div className="inline-flex h-8 items-center rounded-full bg-white/10 px-4 text-sm text-white backdrop-blur-sm mb-6">
+            <Badge
+              variant="secondary"
+              className="bg-white/80 rounded-full text-purple mb-6 px-4 py-1.5 text-sm backdrop-blur-sm border-0 flex items-center gap-2 w-fit mx-auto"
+            >
+              <User2 className="w-4 h-4 text-purple" />
               Our Latest Projects
-            </div>
-            <h1 className="text-5xl sm:text-6xl md:text-6xl font-bold text-white leading-[1.1] mb-6">
+            </Badge>
+
+            <h1 className="text-5xl sm:text-6xl md:text-5xl font-bold text-white mb-6">
               Acquire talents faster and
               <br />
               smarter with HR automation
@@ -34,11 +39,11 @@ export default function ServicesPage() {
               best talents faster, effortlessly.
             </p>
             <Button
-                // onClick={()=>{
-                //     redirect("/projects")
-                // }}
+              // onClick={()=>{
+              //     redirect("/projects")
+              // }}
               variant="ghost"
-              className="bg-purple hover:bg-purple/90 text-white rounded-full px-8 h-12"
+              className="bg-purple hover:bg-purple/90 text-white rounded-full px-6 h-10"
             >
               Get in touch
               <ArrowRight className="ml-2 h-5 w-5" />
