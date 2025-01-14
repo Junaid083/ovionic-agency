@@ -23,7 +23,7 @@ export default function ContactPage() {
 function LeftSection() {
 	return (
 		<div className="lg:w-1/2 flex flex-col">
-			<div className="space-y-3 p-4">
+			<div className="space-y-3 p-4 ">
 				<h1 className="text-2xl font-bold text-center lg:text-left lg:text-[64px] lg:leading-tight">
 					Share your details
 				</h1>
@@ -58,8 +58,8 @@ function LeftSection() {
 
 function RightSection() {
 	return (
-		<div className="lg:w-1/2">
-			<Card className="w-full py-8 px-4 rounded-xl border-gray-200">
+		<div className="lg:w-3/2">
+			<Card className="w-full py-8 px-8 rounded-xl border-gray-200">
 				<form className="space-y-6">
 					<h2 className="text-2xl font-bold">Share your Idea</h2>
 
