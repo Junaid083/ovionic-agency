@@ -13,30 +13,28 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center bg-[#0C1220]">
         <Image
-        src="/images/aboutUs/cover.png"
-        alt="Office environment"
-        fill
-        className="object-cover"
-        priority
-      />
-            <div className="absolute inset-0 bg-black/80" />
+          src="/images/aboutUs/cover.png"
+          alt="Office environment"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/80" />
 
-        <div className="relative z-10 container mx-auto px-4 min-h-screen flex items-center">
+        <div className="relative z-10 container mx-auto px-4 min-h-screen flex items-center text-center md:text-left">
           <div className="max-w-2xl">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.1] mb-6">
-              We Engineer
-              <br />
-              Software Solutions
+            <h1 className="text-5xl sm:text-6xl md:text-6xl font-bold text-white leading-[1.1] mb-6">
+              Acquire talents faster & smarter with HR automation
             </h1>
             <p className="text-lg text-gray mb-8 max-w-xl">
               The best choice to streamline your recruitment process & get the
               best talents faster, effortlessly.
             </p>
             <Link href="/projects">
-            <Button  className="bg-purple hover:bg-purple/90 text-white rounded-full px-8 h-12">
-              Get in touch
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+              <Button className="bg-purple hover:bg-purple/90 text-white rounded-full px-8 h-12">
+                Get in touch
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </Link>
           </div>
         </div>
@@ -61,25 +59,32 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {featuredServices.map((service) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredServices.map((service, index) => (
               <div
                 key={service.title}
-                className="relative aspect-[16/9] group overflow-hidden rounded-3xl"
+                className={`relative group overflow-hidden rounded-3xl ${
+                  index === 0 ? "md:col-span-2" : ""
+                }`}
               >
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
-                  <div className="absolute bottom-0 p-8">
-                    <div className="text-white/80 mb-2">Featured</div>
-                    <h3 className="text-2xl font-bold text-white mb-4">
+                <div className="relative w-full h-56 sm:h-72 md:h-72 lg:h-96">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    layout="fill" // Use layout fill to make the image fill the container
+                    objectFit="cover" // Ensure image covers the container without stretching
+                    className="transition-transform duration-300 group-hover:scale-105 rounded-3xl" // Apply hover effect and rounded corners
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent rounded-3xl">
+                  <div className="absolute bottom-0 p-6 sm:p-8">
+                    <div className="text-white/80 mb-2 text-sm sm:text-base">
+                      Featured
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
                       {service.title}
                     </h3>
-                    <Button className="bg-purple hover:bg-purple/90 text-white rounded-full">
+                    <Button className="bg-purple hover:bg-purple/90 text-white rounded-full text-sm sm:text-base">
                       Get in touch
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
@@ -111,17 +116,19 @@ export default function ServicesPage() {
                 {category.services.map((service, serviceIndex) => (
                   <Card
                     key={serviceIndex}
-                    className="bg-white rounded-[32px] p-8 hover:shadow-lg transition-all duration-300"
+                    className="bg-white rounded-[32px] p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between" // Use flexbox layout
                   >
-                    <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-8">
+                    <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-8 border">
                       {service.icon}
                     </div>
-                    <h3 className="text-[28px] font-bold mb-4">
+                    <h3 className="text-[28px] font-bold mb-4 text-left">
                       {service.title}
-                    </h3>
-                    <p className="text-gray text-lg mb-8">
+                    </h3>{" "}
+                    {/* Align title to the left */}
+                    <p className="text-gray text-lg mb-8 flex-grow text-left">
                       {service.description}
-                    </p>
+                    </p>{" "}
+                    {/* Align description to the left */}
                     <Button className="bg-purple hover:bg-purple/90 text-white rounded-full w-full h-14 text-lg">
                       Get in touch
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -154,6 +161,10 @@ const featuredServices = [
   {
     title: "Software Development",
     image: "/images/software/dev.png",
+  },
+  {
+    title: "Shopify",
+    image: "/images/software/shopify.png",
   },
 ];
 

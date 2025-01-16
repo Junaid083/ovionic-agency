@@ -3,9 +3,28 @@ import Header from "./components/layout/header";
 import Newsletter from "./components/sections/Newsletter";
 import Testimonials from "./components/sections/Testimonials";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Manrope, Playfair_Display, Roboto, Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
+const roboto = Roboto({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata = {
   title: "Ovionic Agency | A Creative Agency for Redemptive Brands",
@@ -41,8 +60,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html
+      lang="en"
+      className={`${manrope.variable} ${playfair.variable} ${roboto.variable} ${inter.variable}`}
+    >
+      <body className="font-manrope">
         <Header />
         <main className="pt-20">{children}</main>
         <Testimonials />
