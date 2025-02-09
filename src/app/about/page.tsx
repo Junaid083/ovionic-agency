@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Hero } from "../components/about/Hero";
 import { StorySection } from "../components/about/StorySection";
 import { TeamSection } from "../components/about/TeamSection";
@@ -9,35 +12,63 @@ export default function AboutPage() {
     <>
       <Hero />
       <Widget>
-        <section className="py-20">
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="py-20"
+        >
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-5xl font-bold text-center max-w-4xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-3xl md:text-5xl font-bold text-center max-w-4xl mx-auto"
+            >
               Achieve efficient hiring and seamless candidate management
-            </h2>
+            </motion.h2>
           </div>
-        </section>
+        </motion.section>
 
         <section className="py-20 ">
           <div className="container mx-auto px-4">
-            <StorySection
-              title="Our Founding Story"
-              description="Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline. Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline."
-              imageSrc="/images/aboutUs/founding1.png"
-              imageAlt="Team meeting"
-            />
-            <StorySection
-              title="Our Founding Story"
-              description="Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline. Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline."
-              imageSrc="/images/aboutUs/founding2.png"
-              imageAlt="Office collaboration"
-              reverse
-            />
-            <StorySection
-              title="Our Founding Story"
-              description="Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline. Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline."
-              imageSrc="/images/aboutUs/founding3.png"
-              imageAlt="Team brainstorming"
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <StorySection
+                title="Our Founding Story"
+                description="Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline. Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline."
+                imageSrc="/images/aboutUs/founding1.png"
+                imageAlt="Team meeting"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <StorySection
+                title="Our Founding Story"
+                description="Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline. Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline."
+                imageSrc="/images/aboutUs/founding2.png"
+                imageAlt="Office collaboration"
+                reverse
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <StorySection
+                title="Our Founding Story"
+                description="Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline. Create your branded career site, publish your job openings in seconds and automatically receive applicants into your hiring pipeline."
+                imageSrc="/images/aboutUs/founding3.png"
+                imageAlt="Team brainstorming"
+              />
+            </motion.div>
           </div>
         </section>
         <CTA />
