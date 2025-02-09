@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -19,31 +22,65 @@ export default function ServicesPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/80" />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="absolute inset-0 bg-black/80"
+        />
 
-        <div className="relative z-10 container mx-auto px-4 min-h-screen flex items-center text-center md:text-left">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative z-10 container mx-auto px-4 min-h-screen flex items-center text-center md:text-left"
+        >
           <div className="max-w-2xl">
-            <h1 className="text-5xl sm:text-6xl md:text-6xl font-bold text-white leading-[1.1] mb-6">
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="text-5xl sm:text-6xl md:text-6xl font-bold text-white leading-[1.1] mb-6"
+            >
               Acquire talents faster & smarter with HR automation
-            </h1>
-            <p className="text-lg text-gray mb-8 max-w-xl">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              className="text-lg text-gray mb-8 max-w-xl"
+            >
               The best choice to streamline your recruitment process & get the
               best talents faster, effortlessly.
-            </p>
-            <Link href="/projects">
-              <Button className="bg-purple hover:bg-purple/90 text-white rounded-full px-8 h-12">
-                Get in touch
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link href="/projects">
+                <Button className="bg-purple hover:bg-purple/90 text-white rounded-full px-8 h-12">
+                  Get in touch
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Featured Services */}
       <Widget>
         <div className="container mx-auto px-4 py-24">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <div className="inline-flex h-8 items-center rounded-full bg-purple-50 px-4 text-sm text-purple mb-6">
               OUR FEATURES
             </div>
@@ -57,23 +94,28 @@ export default function ServicesPage() {
               optimizing data organization, fostering effective communication,
               and enhancing overall sales effectiveness.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-              <div
+              <motion.div
                 key={service.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                whileHover={{ y: -10 }}
                 className={`relative group overflow-hidden rounded-3xl ${
                   index === 0 ? "md:col-span-2" : ""
                 }`}
               >
                 <div className="relative w-full h-56 sm:h-72 md:h-72 lg:h-96">
                   <Image
-                    src={service.image}
+                    src={service.image || "/placeholder.svg"}
                     alt={service.title}
-                    layout="fill" // Use layout fill to make the image fill the container
-                    objectFit="cover" // Ensure image covers the container without stretching
-                    className="transition-transform duration-300 group-hover:scale-105 rounded-3xl" // Apply hover effect and rounded corners
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-300 group-hover:scale-105 rounded-3xl"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent rounded-3xl">
@@ -90,19 +132,29 @@ export default function ServicesPage() {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Service Categories */}
         {serviceCategories.map((category, index) => (
-          <section
+          <motion.section
             key={index}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.3 }}
             className={`py-24 ${index % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
           >
             <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center mb-16"
+              >
                 <div className="inline-flex h-8 items-center rounded-full border border-purple px-4 text-sm text-purple mb-6">
                   Our Services
                 </div>
@@ -110,34 +162,42 @@ export default function ServicesPage() {
                 <p className="text-gray max-w-3xl mx-auto">
                   {category.description}
                 </p>
-              </div>
+              </motion.div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {category.services.map((service, serviceIndex) => (
-                  <Card
+                  <motion.div
                     key={serviceIndex}
-                    className="bg-white rounded-[32px] p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between" // Use flexbox layout
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: serviceIndex * 0.1,
+                      ease: "easeOut",
+                    }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    whileHover={{ y: -10, transition: { duration: 0.3 } }}
                   >
-                    <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-8 border">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-[28px] font-bold mb-4 text-left">
-                      {service.title}
-                    </h3>{" "}
-                    {/* Align title to the left */}
-                    <p className="text-gray text-lg mb-8 flex-grow text-left">
-                      {service.description}
-                    </p>{" "}
-                    {/* Align description to the left */}
-                    <Button className="bg-purple hover:bg-purple/90 text-white rounded-full w-full h-14 text-lg">
-                      Get in touch
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  </Card>
+                    <Card className="bg-white rounded-[32px] p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between h-full">
+                      <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-8 border">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-[28px] font-bold mb-4 text-left">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray text-lg mb-8 flex-grow text-left">
+                        {service.description}
+                      </p>
+                      <Button className="bg-purple hover:bg-purple/90 text-white rounded-full w-full h-14 text-lg">
+                        Get in touch
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Card>
+                  </motion.div>
                 ))}
               </div>
             </div>
-          </section>
+          </motion.section>
         ))}
         <CTA />
       </Widget>

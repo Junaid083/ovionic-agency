@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
@@ -24,16 +27,40 @@ export default function Newsletter() {
       />
 
       <div className="container relative z-10 mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto text-center"
+        >
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight"
+          >
             Subscribe to our newsletter
-          </h2>
-          <p className="text-gray-300/90 mb-12 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-gray-300/90 mb-12 text-base sm:text-lg max-w-xl mx-auto leading-relaxed"
+          >
             Get the latest notifications about what we've updated now and in the
             last month, and you can opt-out email from notifications about us
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col gap-4 max-w-md mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col gap-4 max-w-md mx-auto"
+          >
             <Input
               type="email"
               placeholder="E.g. Doejohn@example.com"
@@ -42,46 +69,70 @@ export default function Newsletter() {
             <Button className="h-14 rounded-xl bg-purple hover:bg-[#6D28D9] text-white text-base font-medium w-full transition-colors duration-200">
               Discover more <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Name tags - Desktop */}
-        <div className="absolute left-8 bottom-8 hidden sm:block">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="absolute left-8 bottom-8 hidden sm:block"
+        >
           <div className="flex items-center gap-2">
             <div className="w-0 h-0 border-t-[6px] border-t-transparent border-r-[12px] border-r-[#00DC82] border-b-[6px] border-b-transparent" />
             <span className="bg-[#00DC82] text-black text-sm px-4 py-1.5 rounded-lg font-medium">
               Terry Bator
             </span>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="absolute right-8 bottom-8 hidden sm:block">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="absolute right-8 bottom-8 hidden sm:block"
+        >
           <div className="flex items-center gap-2">
             <span className="bg-[#FF5733] text-white text-sm px-4 py-1.5 rounded-lg font-medium">
               Miracle Ekstrom Bothman
             </span>
             <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[12px] border-l-[#FF5733] border-b-[6px] border-b-transparent" />
           </div>
-        </div>
+        </motion.div>
 
         {/* Name tags - Mobile */}
-        <div className="absolute left-10 -bottom-12 sm:hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="absolute left-10 -bottom-12 sm:hidden"
+        >
           <div className="flex items-center gap-2">
             <div className="w-0 h-0 border-t-[6px] border-t-transparent border-r-[12px] border-r-[#00DC82] border-b-[6px] border-b-transparent" />
             <span className="bg-[#00DC82] text-black text-sm px-3 py-1 rounded-md font-medium">
               Terry Bator
             </span>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="absolute right-10 -top-12 sm:hidden">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="absolute right-10 -top-12 sm:hidden"
+        >
           <div className="flex items-center gap-2">
             <span className="bg-[#FF5733] text-white text-sm px-3 py-1 rounded-md font-medium">
               Miracle Ekstrom Bothman
             </span>
             <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[12px] border-l-[#FF5733] border-b-[6px] border-b-transparent" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

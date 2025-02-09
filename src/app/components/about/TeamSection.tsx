@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface TeamMember {
@@ -33,27 +36,44 @@ export function TeamSection() {
   return (
     <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-16 leading-[1.2]">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-16 leading-[1.2]"
+        >
           We Have Well
           <br />
           Experience Team
           <br />
           Member
-        </h2>
+        </motion.h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="group">
-              <div className="relative aspect-square mb-6 overflow-hidden">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                className="relative aspect-square mb-6 overflow-hidden"
+              >
                 <Image
-                  src={member.image}
+                  src={member.image || "/placeholder.svg"}
                   alt={member.name}
                   fill
                   className="object-cover object-center"
                 />
-              </div>
+              </motion.div>
               <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
               <p className="text-gray-400 text-sm">{member.role}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
