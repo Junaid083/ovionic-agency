@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[85vh] flex items-center">
+      <section className="relative h-[85vh] md:h-[70vh] flex items-center">
         <Image
           src="/images/bg-main.png"
           alt="Background"
