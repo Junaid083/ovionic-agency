@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CTA() {
   const ref = useRef(null);
@@ -42,14 +43,16 @@ export default function CTA() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button
-              variant="secondary"
-              size="lg"
-              className="rounded-full bg-white text-black hover:bg-white/90 font-bold"
-            >
-              Get In Touch
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/contact">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="rounded-full bg-white text-black hover:bg-white/90 font-bold"
+              >
+                Get In Touch
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
         <motion.div

@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Star } from "lucide-react";
+import Link from "next/link";
 
 const testimonials = [
   {
@@ -235,10 +236,12 @@ export default function Testimonials() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <Button className="bg-purple-600 hover:bg-[#6D28D9] text-white rounded-full px-6 py-3 h-auto text-base font-semibold">
-                Get started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+              <Link href="services">
+                <Button className="bg-purple-600 hover:bg-[#6D28D9] text-white rounded-full px-6 py-3 h-auto text-base font-semibold">
+                  Get started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>

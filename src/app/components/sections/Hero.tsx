@@ -9,6 +9,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -67,10 +68,12 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 sm:px-8 h-12 text-sm sm:text-base font-bold">
-                Get in touch
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 sm:px-8 h-12 text-sm sm:text-base font-bold">
+                  Get in touch
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </motion.div>

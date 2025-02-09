@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface Feature {
   id: number;
@@ -117,10 +118,12 @@ export default function Features() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Button className="bg-purple hover:bg-[#6D28D9] text-white rounded-full px-6 py-3 h-auto text-base font-semibold">
-                    View our projects
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
+                  <Link href="/projects">
+                    <Button className="bg-purple hover:bg-[#6D28D9] text-white rounded-full px-6 py-3 h-auto text-base font-semibold">
+                      View our projects
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </Button>
+                  </Link>
                 </motion.div>
               </motion.div>
             </motion.div>
