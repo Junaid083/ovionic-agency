@@ -1,5 +1,8 @@
+"use client";
+
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -40,10 +43,18 @@ const features: Feature[] = [
 ];
 
 export default function Features() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
   return (
-    <section className="py-12 sm:py-24 bg-white">
+    <section ref={ref} className="py-12 sm:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12 sm:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-12 sm:mb-16"
+        >
           <Badge
             variant="secondary"
             className="bg-[#EEF2FF] text-purple mb-8 px-6 py-2 text-sm font-bold rounded-full"
@@ -53,26 +64,46 @@ export default function Features() {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#1F2937] font-inter">
             Dive in and experience the difference!
           </h2>
-        </div>
+        </motion.div>
 
         <div className="space-y-24 text-center md:text-left">
-          {features.map((feature) => (
-            <div
+          {features.map((feature, index) => (
+            <motion.div
               key={feature.id}
-              className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center border-r-0  lg:border-r-4 lg:border-gray-200"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+                ease: "easeOut",
+              }}
+              className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center border-r-0 lg:border-r-4 lg:border-gray-200"
             >
-              <div className="relative">
-                <div className=" absolute inset-0 rounded-2xl" />
+              <motion.div
+                className="relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 rounded-2xl" />
                 <Image
-                  src={feature.image}
+                  src={feature.image || "/placeholder.svg"}
                   alt={feature.imageAlt}
                   width={600}
                   height={400}
                   className="w-full h-auto rounded-2xl shadow-lg relative z-10"
                 />
-              </div>
+              </motion.div>
 
-              <div className="space-y-6 pr-8 ">
+              <motion.div
+                className="space-y-6 pr-8"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.2 + 0.2,
+                  ease: "easeOut",
+                }}
+              >
                 <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#EEF2FF] text-purple font-medium">
                   {feature.id}
                 </div>
@@ -82,12 +113,17 @@ export default function Features() {
                 <p className="text-[#6B7280] text-lg leading-[1.75] font-normal">
                   {feature.description}
                 </p>
-                <Button className="bg-purple hover:bg-[#6D28D9] text-white rounded-full px-6 py-3 h-auto text-base font-semibold">
-                  View our projects
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </div>
-            </div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button className="bg-purple hover:bg-[#6D28D9] text-white rounded-full px-6 py-3 h-auto text-base font-semibold">
+                    View our projects
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>

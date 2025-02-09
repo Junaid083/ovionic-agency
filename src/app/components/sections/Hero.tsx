@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,35 +15,65 @@ export default function Hero() {
     <div>
       {/* Hero Section */}
       <section className="relative h-[85vh] md:h-[70vh] flex items-center">
-        <Image
-          src="/images/bg-main.png"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/bg-main.png"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 " />
-        <div className="relative z-10 container mx-auto px-4 min-h-screen flex items-center">
-          <div className=" text-center md:text-left max-w-xl md:max-w-2xl bg-gray-700/50 p-12 rounded-lg backdrop-blur-md ">
-            <h1 className="font-manrope text-3xl  sm:text-5xl md:text-6xl  font-black text-white leading-[1.2] mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative z-10 container mx-auto px-4 min-h-screen flex items-center"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-center md:text-left max-w-xl md:max-w-2xl bg-gray-700/50 p-12 rounded-lg backdrop-blur-md"
+          >
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              className="font-manrope text-3xl sm:text-5xl md:text-6xl font-black text-white leading-[1.2] mb-8"
+            >
               A creative agency
               <br />
               for redemptive
               <br />
               brands
-            </h1>
-            <p className="font-plus-jakarta text-base  sm:text-lg text-gray-100 mb-8 max-w-md sm:max-w-xl opacity-90">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              className="font-plus-jakarta text-base sm:text-lg text-gray-100 mb-8 max-w-md sm:max-w-xl opacity-90"
+            >
               We are Ovionic Based Design Agency. Lorem ipsum dolor sit amet,
               consectetur adipiscing elit. Elementum felis, sed ullamcorper
               tempus faucibus in imperdiet. Semper justo mauris sed fusce erat
               aenean tristique.
-            </p>
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6     sm:px-8 h-12 text-sm sm:text-base font-bold">
-              Get in touch
-              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-            </Button>
-          </div>
-        </div>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 sm:px-8 h-12 text-sm sm:text-base font-bold">
+                Get in touch
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+              </Button>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Partners Section */}
@@ -54,20 +87,26 @@ export default function Hero() {
             className="w-full"
           >
             <CarouselContent>
-              {partners.map((partner) => (
+              {partners.map((partner, index) => (
                 <CarouselItem
                   key={partner.name}
                   className="basis-1/3 sm:basis-1/5"
                 >
-                  <div className="p-1">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ scale: 1.05 }}
+                    className="p-1"
+                  >
                     <Image
-                      src={partner.logo}
+                      src={partner.logo || "/placeholder.svg"}
                       alt={partner.name}
                       width={80}
                       height={30}
-                      className="sm:24 md:w-40 h-auto opacity-50"
+                      className="sm:24 md:w-40 h-auto opacity-50 hover:opacity-100 transition-opacity duration-300"
                     />
-                  </div>
+                  </motion.div>
                 </CarouselItem>
               ))}
             </CarouselContent>
