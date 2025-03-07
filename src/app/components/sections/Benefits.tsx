@@ -41,14 +41,14 @@ export default function Benefits() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="flex flex-col items-center text-center mb-12 sm:mb-16"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             <Badge
               variant="outline"
@@ -62,7 +62,7 @@ export default function Benefits() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
             className="text-3xl sm:text-[40px] font-bold mb-2 tracking-tight"
           >
             Benefits for Your Business
@@ -71,7 +71,7 @@ export default function Benefits() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
             className="text-3xl sm:text-[40px] font-bold text-purple mb-4 sm:mb-6 tracking-tight"
           >
             Growth
@@ -81,7 +81,7 @@ export default function Benefits() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
             className="text-gray max-w-3xl text-base sm:text-lg"
           >
             Strengthening customer connections, streamlining operations,
@@ -98,7 +98,7 @@ export default function Benefits() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
-                duration: 0.5,
+                duration: 0.3,
                 delay: 0.2 * (index + 1),
                 ease: "easeOut",
               }}
@@ -115,7 +115,7 @@ export default function Benefits() {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.3,
                   delay: 0.3 * (index + 1),
                   ease: "easeOut",
                 }}
@@ -144,7 +144,7 @@ export default function Benefits() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.3,
                   delay: 0.4 * (index + 1),
                   ease: "easeOut",
                 }}
@@ -157,7 +157,7 @@ export default function Benefits() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.3,
                   delay: 0.5 * (index + 1),
                   ease: "easeOut",
                 }}

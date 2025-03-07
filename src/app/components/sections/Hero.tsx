@@ -29,20 +29,20 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="relative z-10 container mx-auto px-4 min-h-screen flex items-center"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             className="text-center md:text-left max-w-xl md:max-w-2xl bg-gray-700/50 p-12 rounded-lg backdrop-blur-md"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              className="font-manrope text-3xl sm:text-5xl md:text-6xl font-black text-white leading-[1.2] mb-8"
+              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+              className="font-inter text-4xl sm:text-5xl md:text-6xl font-[1000] text-white leading-[1.2] mb-8 tracking-wide  "
             >
               A creative agency
               <br />
@@ -53,7 +53,7 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
               className="font-plus-jakarta text-base sm:text-lg text-gray-100 mb-8 max-w-md sm:max-w-xl opacity-90"
             >
               We are Ovionic Based Design Agency. Lorem ipsum dolor sit amet,
@@ -64,7 +64,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -98,7 +98,7 @@ export default function Hero() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
                     whileHover={{ scale: 1.05 }}
                     className="p-1"
                   >

@@ -50,7 +50,7 @@ export default function About({ imagePosition = "left" }: AboutProps) {
         opacity: isInView ? 1 : 0,
         x: isInView ? 0 : imagePosition === "left" ? -50 : 50,
       }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <Card className="overflow-hidden border-none shadow-xl">
         <motion.div
@@ -77,13 +77,13 @@ export default function About({ imagePosition = "left" }: AboutProps) {
         opacity: isInView ? 1 : 0,
         x: isInView ? 0 : imagePosition === "left" ? 50 : -50,
       }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className="space-y-6"
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
         className="text-3xl sm:text-4xl font-bold"
       >
         {data.title}
@@ -91,7 +91,7 @@ export default function About({ imagePosition = "left" }: AboutProps) {
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+        transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
         className="text-gray text-base sm:text-lg leading-relaxed"
       >
         {data.description}
@@ -99,7 +99,7 @@ export default function About({ imagePosition = "left" }: AboutProps) {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-        transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >

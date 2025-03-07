@@ -39,7 +39,7 @@ export function TeamSection() {
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-16 leading-[1.2]"
         >
@@ -55,7 +55,7 @@ export function TeamSection() {
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="group"
             >

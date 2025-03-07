@@ -30,14 +30,14 @@ export default function Newsletter() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="max-w-2xl mx-auto text-center"
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight"
           >
@@ -46,7 +46,7 @@ export default function Newsletter() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
             className="text-gray-300/90 mb-12 text-base sm:text-lg max-w-xl mx-auto leading-relaxed"
           >
@@ -57,7 +57,7 @@ export default function Newsletter() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
             viewport={{ once: true }}
             className="flex flex-col gap-4 max-w-md mx-auto"
           >
@@ -76,7 +76,7 @@ export default function Newsletter() {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
           viewport={{ once: true }}
           className="absolute left-8 bottom-8 hidden sm:block"
         >
@@ -91,7 +91,7 @@ export default function Newsletter() {
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
           viewport={{ once: true }}
           className="absolute right-8 bottom-8 hidden sm:block"
         >
@@ -107,7 +107,7 @@ export default function Newsletter() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
           viewport={{ once: true }}
           className="absolute left-10 -bottom-12 sm:hidden"
         >
@@ -122,7 +122,7 @@ export default function Newsletter() {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
           viewport={{ once: true }}
           className="absolute right-10 -top-12 sm:hidden"
         >
