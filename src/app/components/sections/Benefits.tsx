@@ -131,11 +131,9 @@ export default function Benefits() {
                   <Image
                     src={benefit.icon || "/placeholder.svg"}
                     alt={benefit.title}
-                    width={32}
-                    height={32}
-                    className={
-                      benefit.featured ? "brightness-0 invert" : "opacity-80"
-                    }
+                    width={48}
+                    height={48}
+                    // className={benefit.featured ? "opacity-100" : "opacity-80"}
                   />
                 </motion.div>
               </motion.div>
