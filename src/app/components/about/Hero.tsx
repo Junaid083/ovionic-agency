@@ -20,7 +20,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.5 }}
         className="absolute inset-0 bg-black/50"
       />
 
@@ -28,7 +28,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Badge
             variant="secondary"
@@ -41,7 +41,7 @@ export function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-white max-w-4xl mb-6 leading-[1.2]"
         >
           Acquire talents faster and smarter with HR automation
@@ -49,7 +49,7 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="text-lg md:text-xl text-white/80 max-w-2xl mb-8"
         >
           The best choice to streamline your recruitment process & get the best
@@ -58,7 +58,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
         >
           <Link href="contact">
             <Button

@@ -24,20 +24,20 @@ export default function ProjectPage() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="absolute inset-0 bg-black/50"
         />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="relative z-10 container mx-auto px-4 min-h-[80vh] flex items-center justify-center text-center"
         >
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Badge
                 variant="secondary"
@@ -51,7 +51,7 @@ export default function ProjectPage() {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
               className="text-5xl sm:text-6xl md:text-5xl font-bold text-white mb-6"
             >
               Acquire talents faster and
@@ -61,7 +61,7 @@ export default function ProjectPage() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
               className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto"
             >
               The best choice to streamline your recruitment process & get the
@@ -70,7 +70,7 @@ export default function ProjectPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
+              transition={{ duration: 0.5, delay: 1 }}
             >
               <Button
                 variant="ghost"
@@ -88,13 +88,13 @@ export default function ProjectPage() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="container mx-auto px-4 py-20"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center mb-16"
           >
             <div className="inline-flex h-8 items-center rounded-full bg-purple-50 px-4 text-sm text-purple mb-6">
@@ -108,7 +108,7 @@ export default function ProjectPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col gap-24"
           >
             {projects.map((project, index) => (
@@ -116,7 +116,7 @@ export default function ProjectPage() {
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
+                transition={{ duration: 0.5, delay: 0.2 * (index + 1) }}
               >
                 <ProjectCard {...project} />
               </motion.div>

@@ -25,21 +25,21 @@ export default function ServicesPage() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="absolute inset-0 bg-black/80"
         />
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="relative z-10 container mx-auto px-4 min-h-screen flex items-center text-center md:text-left"
         >
           <div className="max-w-2xl">
             <motion.h1
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
               className="text-5xl sm:text-6xl md:text-6xl font-bold text-white leading-[1.1] mb-6"
             >
               Acquire talents faster & smarter with HR automation
@@ -47,7 +47,7 @@ export default function ServicesPage() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
               className="text-lg text-gray mb-8 max-w-xl"
             >
               The best choice to streamline your recruitment process & get the
@@ -56,7 +56,7 @@ export default function ServicesPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -77,7 +77,7 @@ export default function ServicesPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -143,7 +143,7 @@ export default function ServicesPage() {
             key={index}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.3 }}
             className={`py-24 ${index % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
           >
@@ -151,7 +151,7 @@ export default function ServicesPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="text-center mb-16"
               >

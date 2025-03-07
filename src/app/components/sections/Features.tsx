@@ -53,7 +53,7 @@ export default function Features() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-12 sm:mb-16"
         >
           <Badge
@@ -74,7 +74,7 @@ export default function Features() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
               transition={{
-                duration: 0.8,
+                duration: 0.5,
                 delay: index * 0.2,
                 ease: "easeOut",
               }}
@@ -100,7 +100,7 @@ export default function Features() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
                 transition={{
-                  duration: 0.8,
+                  duration: 0.5,
                   delay: index * 0.2 + 0.2,
                   ease: "easeOut",
                 }}

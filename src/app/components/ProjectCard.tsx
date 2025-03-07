@@ -24,7 +24,7 @@ export default function ProjectCard({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.5 }}
     >
       <motion.div
         whileHover={{ scale: 1.05 }}
@@ -43,7 +43,7 @@ export default function ProjectCard({
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3 className="text-[40px] font-bold text-navy leading-tight">
             {title}
@@ -54,7 +54,7 @@ export default function ProjectCard({
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Button
             asChild

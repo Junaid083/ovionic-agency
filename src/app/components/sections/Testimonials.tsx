@@ -56,7 +56,7 @@ export default function Testimonials() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
             >
               <Card className="absolute -top-20 left-0 w-[350px] h-[50px] bg-[#212633]/20 border-0 rounded-2xl" />
             </motion.div>
@@ -64,7 +64,7 @@ export default function Testimonials() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
             >
               <Card className="absolute -top-[15px] left-0 w-[350px] bg-[#212633] border-0 p-8 rounded-2xl z-20 transition-all duration-300 hover:-translate-y-1">
                 <p className="text-white text-[15px] leading-relaxed mb-6">
@@ -91,7 +91,7 @@ export default function Testimonials() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
             >
               <Card className="absolute top-[210px] left-0 w-[350px] bg-[#212633] border-0 p-8 rounded-2xl z-20 transition-all duration-300 hover:-translate-y-1">
                 <p className="text-white text-[15px] leading-relaxed mb-6">
@@ -118,7 +118,7 @@ export default function Testimonials() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
             >
               <Card className="absolute -bottom-20 left-0 w-[350px] h-[30px] bg-[#212633]/20 border-0 rounded-2xl" />
             </motion.div>
@@ -128,7 +128,7 @@ export default function Testimonials() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
             >
               <Card className="absolute -top-10 right-0 w-[350px] h-[200px] bg-[#212633]/20 border-0 rounded-2xl" />
             </motion.div>
@@ -136,7 +136,7 @@ export default function Testimonials() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
             >
               <Card className="absolute top-[180px] right-0 w-[350px] bg-[#212633] border-0 p-8 rounded-2xl z-10 transition-all duration-300 hover:-translate-y-1">
                 <p className="text-white text-[15px] leading-relaxed mb-6">
@@ -163,7 +163,7 @@ export default function Testimonials() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
-              transition={{ duration: 0.5, delay: 0.7 }}
+              transition={{ duration: 0.3, delay: 0.7 }}
             >
               <Card className="absolute -bottom-[200px] right-0 w-[350px] h-[200px] bg-[#212633]/20 border-0 rounded-2xl" />
             </motion.div>
@@ -177,7 +177,7 @@ export default function Testimonials() {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={cardVariants}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 <Card className="w-full bg-[#212633] border-0 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1">
                   <p className="text-white text-[15px] leading-relaxed mb-4">
@@ -207,7 +207,7 @@ export default function Testimonials() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
             >
               <Badge className="bg-white/10 text-white border-0 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-6">
                 Testimonials
@@ -216,7 +216,7 @@ export default function Testimonials() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
               className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-[1.1]"
             >
               Our customers say about us
@@ -224,7 +224,7 @@ export default function Testimonials() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
               className="text-[#9CA3AF] text-base lg:text-lg mb-8 leading-relaxed max-w-xl"
             >
               Build trust, increase conversions, and watch your business thrive.
@@ -234,7 +234,7 @@ export default function Testimonials() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
             >
               <Link href="services">
                 <Button className="bg-purple-600 hover:bg-[#6D28D9] text-white rounded-full px-6 py-3 h-auto text-base font-semibold">

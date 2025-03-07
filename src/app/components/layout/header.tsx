@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Facebook, Instagram, Twitter, Linkedin, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useState } from "react";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -23,6 +24,7 @@ const socialLinks = [
 
 export default function Header() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm">
@@ -73,7 +75,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu */}
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon" className="h-10 w-10">
                 <Menu className="h-6 w-6" />
@@ -85,6 +87,7 @@ export default function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
+                    onClick={() => setOpen(false)}
                     className={`font-medium text-lg ${
                       pathname === item.href
                         ? "text-purple"
